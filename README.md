@@ -3,11 +3,11 @@
 ## Buildar a imagem do projeto
 
 ```bash
-    docker build -t lp_app .
+make build
 ```
 
 ## Rodar o script
 
 ```bash
-docker run --rm -v $(pwd)/src:/app/src lp_app
+make run
 ```
