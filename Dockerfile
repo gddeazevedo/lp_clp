@@ -8,7 +8,7 @@ COPY Project.toml ./
 
 RUN julia -e 'using Pkg; Pkg.instantiate()'
 
-RUN julia -e 'using Pkg; Pkg.add(["Clp", "JuMP", "JSON3"])'
+RUN julia -e 'using Pkg; Pkg.add(["Clp", "JuMP", "JSON3", "MathOptInterface"])'
 
 COPY src ./src
 
