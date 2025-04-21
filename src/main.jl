@@ -1,3 +1,7 @@
-include("./services/solver_service.jl")
+import JuMP
+import Clp
+import CSV
+import DataFrames
+import JSON3
 
-println("Hello")
+println("Ambiente de Desenvolvimento Julia pronto! 🚀")
