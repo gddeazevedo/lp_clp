@@ -11,3 +11,9 @@ make build
 ```bash
 make run
 ```
+
+## Rodar exemplos
+
+```bash
+make run-example file=<arquivo de exemplo>
+```
