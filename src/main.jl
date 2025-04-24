@@ -1,8 +1,6 @@
-import JuMP
-import Clp
-import CSV
-import DataFrames
-import JSON3
+using JuMP
+using Clp
+
 
 println("Ambiente de Desenvolvimento Julia pronto! 🚀")
 
