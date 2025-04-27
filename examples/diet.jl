@@ -1,6 +1,6 @@
 using Clp
 using JuMP
-import MathOptInterface as MOI
+using MathOptInterface
 
 A::Matrix{Float32} = [
     2   2  10   20;
@@ -26,13 +26,12 @@ status = termination_status(model)
 
 println(model)
 
-if status == MOI.OPTIMAL
+if status == OPTIMAL
     println("Optimal solution found")
 
     println("Objective value: ", objective_value(model))
     println("Variable values: ", value.(x))
-
-elseif status == MOI.INFEASIBLE
+elseif status == INFEASIBLE
     println("Problem is infeasible")
 end
 
