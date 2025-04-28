@@ -1,9 +1,9 @@
 using JuMP
 using Clp
-import MathOptInterface as MOI
+using MathOptInterface
 
 model = Model(Clp.Optimizer)
-set_silent(model)
+
 
 @variable(model, x[1:3] >= 0)
 
@@ -19,11 +19,11 @@ optimize!(model)
 status = termination_status(model)
 println(model)
 
-if status == MOI.OPTIMAL
+if status == OPTIMAL
     println("Optimal solution found")
 
     println("Objective value: ", objective_value(model))
     println("Variable values: ", value.(x))
-elseif status == MOI.INFEASIBLE
+elseif status == INFEASIBLE
     println("Problem is infeasible")
 end
