@@ -28,7 +28,7 @@ println(model)
 optimize!(model)
 status = termination_status(model)
 
-if status == MOI.OPTIMAL
+if status == OPTIMAL
     println("Optimal solution found")
     println("Objective value: ", objective_value(model))
     
@@ -37,6 +37,6 @@ if status == MOI.OPTIMAL
             println("X[$i, $j] = ", value(X[i, j]))
         end
     end
-elseif status == MOI.INFEASIBLE
+elseif status == INFEASIBLE
     println("Problem is infeasible")
 end

@@ -23,5 +23,10 @@ make run-example file=<arquivo de exemplo>
 ```bash
 g++ -o problema_lp problema_lp.cpp -lClp -lCoinUtils -lOsiClp -lOsi
 
-clp -import modelo.lp -primalsimplex -solution output.txt
+clp -import ./data/modelo.lp -primalsimplex -solution output.txt
+```
+
+```bash
+julia -e 'using Pkg; Pkg.instantiate()'
+julia -e 'using Pkg; Pkg.add(["Clp", "JuMP", "MathOptInterface"])'
 ```
